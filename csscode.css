@@ -1,64 +1,134 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Styles généraux */
 body {
+    margin: 0;
     font-family: Arial, sans-serif;
-    direction: rtl;
-    text-align: right;
+    background: #EDE0D4;
+    padding: 0;
+    color: #5C3D2E;
 }
 
+/* PREMIER BARRE */
+aside.barre1 {
+    background: #5C3D2E;
+    color: white;
+    text-align: center;
+    padding: 0.5px;
+    font-size: 14px;
+}
+aside.barre1 a {
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* LOGO ET BARRE DE NAVIGATION */
 header {
-    background: #333;
-    color: white;
-    padding: 15px;
-    text-align: center;
+    background: white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 0px 0px;
 }
 
-.menu {
+.navbar {
     display: flex;
-    justify-content: space-around;
-    padding: 10px;
-    background: #444;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.menu a {
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-}
-
-.container {
-    padding: 20px;
-}
-.container h2{
-    position:relative;
-    text-align: center;
+.logo {
+    font-size: 24px;
+    font-weight: bold;
     
 }
 
-.products {
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+   
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.icons span {
+    font-size: 20px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+/*  grand écran */
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+/* Section principale */
+main {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    justify-content: center;
+    
 }
 
-.product {
-    border: 1px solid #ddd;
-    padding: 15px;
+.description{
+    background-image: url('pexels-ansar-muhammad-380085065-27562181.jpg') ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.products { 
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px; 
+    padding: 20px; 
+}
+
+.product { 
+    border: 1px solid #A67B5B; 
+    padding: 15px; 
+    width: 30%; 
+    background: #F5E6DA; 
+}
+
+
+
+/* Pied de page */
+footer {
     text-align: center;
+    background:  white;
+    color:#A67B5B;
+    padding: 15px;
+    margin-top: 20px;
 }
 
-.product img {
-    max-width: 100%;
-    height: auto;
-}
-
+/* Responsive design */
 @media (max-width: 768px) {
-    .menu {
-        flex-direction: column;
-        align-items: center;
+    .nav-links {
+        display: none;
+    }
+    .menu-icon {
+        display: block;
+    }
+    .hero {
+        text-align: center;
+        padding-left: 0;
+        justify-content: center;
     }
 }
