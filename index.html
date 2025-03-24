@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ManZily</title>
+    <title>MANZILY</title>
     <link rel="stylesheet" href="csscode.css" >
     <link rel="icon" href="images/icon.png" >
     <script src="https://kit.fontawesome.com/9eca5ee094.js" crossorigin="anonymous"></script>
@@ -13,7 +13,7 @@
     
     
 <div class="top-banner" id="topBanner">
-    <p>Sign up and get 20% off to your first order. <a href="#">Sign Up Now</a></p>
+    <p>Sign up and get 20% off to your first order. <a href="login.html">Sign Up Now</a></p>
     <span class="close-btn" onclick="closeBanner()">✖</span>
 </div>
 <script>
@@ -28,19 +28,54 @@
         <div class="menu-icon">
             <i class="fas fa-bars"></i>
         </div>
+        
+        <!-- قائمة المنيو المنسدلة -->
+        <ul class="dropdown-menu">
+            <li>
+                <a href="#">Accueil</a>
+            </li>
+            <li>
+                <a href="#">Produits</a>
+                <ul class="submenu">
+                    <li><a href="#">Chaises</a></li>
+                    <li><a href="#">Tables</a></li>
+                    <li><a href="#">Lits</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">À propos de nous</a>
+            </li>
+            <li>
+                <a href="#">Contacter nous</a>
+            </li>
+        </ul>
+        <script>  
+           document.querySelector(".menu-icon").addEventListener("click", function() {
+             let menu = document.querySelector(".dropdown-menu");
+             menu.style.display = (menu.style.display === "block") ? "none" : "block";
+           });
+       </script>        
 
-      
         <div class="logo">MANZILY</div>
-
-       
         <div class="icons">
-            <div class="icons">
-                <a href=""><i class="fa-solid fa-magnifying-glass"></i></a> 
-                <a href=""><i class="fa-solid fa-cart-shopping"></i></a> 
-                <a href=""><i class="fa-solid fa-user"></i></a> 
+            <div class="search-container">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" class="search-input" placeholder="Rechercher...">
             </div>
-            
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a> 
+            <a href="Login.html"><i class="fa-solid fa-user"></i></a> 
         </div>
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+          const searchIcon = document.querySelector(".search-icon");
+          const searchContainer = document.querySelector(".search-container");
+
+         searchIcon.addEventListener("click", function () {
+         searchContainer.classList.toggle("active");
+          });
+         });
+        </script>
+    
     </div>
 
    
@@ -52,7 +87,6 @@
     </nav>
     
 </header>
-
   
     <main>
         <section class="hero">
@@ -234,4 +268,3 @@
     </footer>
 </body>
 </html>
-
