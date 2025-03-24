@@ -16,27 +16,66 @@
             <div class="menu-icon">
                 <i class="fas fa-bars"></i>
             </div>
+            
+            <!-- قائمة المنيو المنسدلة -->
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="#">Accueil</a>
+                </li>
+                <li>
+                    <a href="#">Produits</a>
+                    <ul class="submenu">
+                        <li><a href="#">Chaises</a></li>
+                        <li><a href="#">Tables</a></li>
+                        <li><a href="#">Lits</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">À propos de nous</a>
+                </li>
+                <li>
+                    <a href="#">Contacter nous</a>
+                </li>
+            </ul>
+            <script>  
+               document.querySelector(".menu-icon").addEventListener("click", function() {
+                 let menu = document.querySelector(".dropdown-menu");
+                 menu.style.display = (menu.style.display === "block") ? "none" : "block";
+               });
+           </script>        
     
-          
             <div class="logo">MANZILY</div>
-    
-           
             <div class="icons">
-                <a href=""></a><i class="fa-solid fa-magnifying-glass"></i> 
-                <a href=""></a><i class="fa-solid fa-cart-shopping"></i> 
+                <div class="search-container">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" class="search-input" placeholder="Rechercher...">
+                </div>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a> 
                 <a href="Login.html"><i class="fa-solid fa-user"></i></a> 
             </div>
+            <script>
+              document.addEventListener("DOMContentLoaded", function () {
+              const searchIcon = document.querySelector(".search-icon");
+              const searchContainer = document.querySelector(".search-container");
+    
+             searchIcon.addEventListener("click", function () {
+             searchContainer.classList.toggle("active");
+              });
+             });
+            </script>
+        
         </div>
     
        
         <nav class="nav-links">
-            <a href="index.html">Accueil</a>
+            <a href="#">Accueil</a>
             <a href="#">Produits</a>
             <a href="#">À propos de nous</a>
             <a href="#">Contacter nous</a>
         </nav>
         
     </header>
+      
     <div class="wrapper">
         <span class="icon-close">
            </a> <ion-icon name="close"></ion-icon>
